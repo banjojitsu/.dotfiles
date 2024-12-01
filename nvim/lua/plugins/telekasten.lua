@@ -9,17 +9,17 @@ return {
 		-- Note creation settings
 		auto_set_filetype = false,
 		filename_small_case = true,
-		filename_space_subst = "-",
-		new_note_filename = "uuid-title",
+		-- filename_space_subst = "-",
+		-- new_note_filename = "uuid-title",
 		sort = "modified",
-		uuid_sep = " | ",
-		uuid_type = "rand",
+		-- uuid_sep = " | ",
+		-- uuid_type = "rand",
 
 		-- Note templates
 		template_new_daily = vim.fn.expand("~/zk/templates/new-daily.md"),
 		template_new_note = vim.fn.expand("~/zk/templates/new-note.md"),
 	},
 	keys = {
-		{ "<leader>z", "<cmd>Telekasten panel<cr>", desc = "telekasten" },
+		{ "<leader>z", mode = { "n", "x", "o" }, "<cmd>Telekasten panel<cr>", desc = "telekasten" },
 	},
 }
