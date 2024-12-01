@@ -15,9 +15,13 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = require("telescope.themes").get_dropdown({ layout_config = { preview_cutoff = 100 } }),
+			pickers = {
+				find_files = { hidden = true },
+			},
 			extensions = {
 				file_browser = {
 					hijack_netrw = true,
+					hidden = { file_browser = true, folder_browser = true },
 				},
 			},
 		})
